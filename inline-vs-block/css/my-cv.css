@@ -1,0 +1,42 @@
+body {
+    font: 16pt/19.2pt Tahoma, Arial, sans-serif;
+}
+table {
+    width: 100%;
+}
+table, tr, td, th {
+    border: 1px solid silver;
+    border-collapse: collapse;
+}
+tbody th {
+    font-family: "courier new", consolas, monospace;
+    font-size: 1.2em;
+}
+.red {
+    color: red;
+}
+.blue {
+    color: blue;
+}
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+.highlight {
+    color: red;
+    font-style: italic;
+}
+.name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.centered {
+    width: 50%;
+    /* display: inline-block; */
+    margin: 0 auto;
+}

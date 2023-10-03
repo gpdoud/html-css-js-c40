@@ -1,14 +1,16 @@
 
 const postUser = (user) => {
-    let http = new XMLHttpRequest();
-    http.responseType = "json";
-    http.open("POST", `http://localhost:5555/api/users`, true);
-    http.setRequestHeader('Content-type', 'application/json');
-    http.onload = function () {
-        console.log(http.response);
-        display(http.response);
-    }
-    http.send(JSON.stringify(user));
+    console.log("postUser()");
+    $.ajax({
+        method: "POST",
+        url: `http://localhost:5555/api/users`,
+        data: JSON.stringify(user),
+        contentType: "application/json"
+    })
+    .done((res) => {
+        console.log("Post successful", res);
+    });
+
 }
 
 const getDataFromHtml = () => {

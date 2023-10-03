@@ -1,24 +1,22 @@
 const getUser = (id) => {
-    let http = new XMLHttpRequest();
-    http.responseType = "json";
-    http.open("GET", `http://localhost:5555/api/users/${id}`, true);
-    http.onload = function () {
-        console.log(http.response);
-        display(http.response);
-    }
-    http.send();
+    $.getJSON(`http://localhost:5555/api/users/${id}`)
+        .done((res) => {
+            console.log(res);
+            display(res);
+        });
 }
 
 const putUser = (user) => {
-    let http = new XMLHttpRequest();
-    http.responseType = "json";
-    http.open("PUT", `http://localhost:5555/api/users/${user.id}`, true);
-    http.setRequestHeader('Content-type', 'application/json');
-    http.onload = function () {
-        console.log(http.response);
-    }
-    http.send(JSON.stringify(user));
-    document.location = "get-users.html";
+    $.ajax({
+        method: "PUT",
+        url: `http://localhost:5555/api/users/${user.id}`,
+        data: JSON.stringify(user),
+        contentType: "application/json"
+    })
+        .done((res) => {
+            console.log("Update successful!");
+            document.location = "get-users.html";
+        })
 }
 
 const getDataFromHtml = () => {

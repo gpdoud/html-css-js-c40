@@ -21,7 +21,6 @@ $(() => {
     getVendor(id);
 });
 
-const url = "http://localhost:5000/api/vendors";
 let id;
 
 const getVendor = (id) => {

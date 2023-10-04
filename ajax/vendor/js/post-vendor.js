@@ -7,8 +7,6 @@ $(() => {
 
 });
 
-const url = "http://localhost:5000/api/vendors";
-
 const pullFromUI = () => {
     let vendor = {};
     vendor.id = $("#xid").val();

@@ -10,8 +10,6 @@ $(() => {
 
 });
 
-const url = "http://localhost:5000/api/vendors";
-
 const getVendor = (id) => {
     $.getJSON(`${url}/${id}`)
         .done((res) => {
